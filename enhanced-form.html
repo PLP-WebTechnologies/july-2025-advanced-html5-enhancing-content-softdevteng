@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Form Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, main, footer {
+      margin-bottom: 20px;
+    }
+    fieldset {
+      border: 2px solid #0073e6;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    legend {
+      font-weight: bold;
+      color: #0073e6;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #333;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    ul {
+      list-style-type: square;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #0073e6;
+      color: #fff;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Enhanced Registration Form</h1>
+  <p>Welcome! Please fill in the details below. Fields marked with * are required.</p>
+</header>
+
+<main>
+  <!-- Structured content: list -->
+  <section>
+    <h2>Steps to Register</h2>
+    <ul>
+      <li>Fill in your personal details</li>
+      <li>Provide contact information</li>
+      <li>Select your preferences</li>
+      <li>Submit the form</li>
+    </ul>
+  </section>
+
+  <!-- Structured content: table -->
+  <section>
+    <h2>Available Membership Plans</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Benefits</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basic</td>
+          <td>Access to newsletters</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td>Premium</td>
+          <td>All Basic + Exclusive resources</td>
+          <td>$9.99/month</td>
+        </tr>
+        <tr>
+          <td>VIP</td>
+          <td>All Premium + Personal mentor</td>
+          <td>$29.99/month</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Media -->
+  <section>
+    <h2>Our Community</h2>
+    <p>Here’s a glimpse of our vibrant community:</p>
+    <img src="https://via.placeholder.com/600x300.png?text=Community+Image" alt="Community gathering">
+  </section>
+
+  <!-- Complete HTML5 Form -->
+  <section>
+    <h2>Registration Form</h2>
+    <form action="#" method="post" autocomplete="on">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender *</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Details</legend>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" placeholder="0712345678" pattern="[0-9]{10}" required>
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Setup</legend>
+
+        <label for="username">Username *</label>
+        <input type="text" id="username" name="username" placeholder="Choose a username" required autocomplete="username">
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" minlength="6" required autocomplete="new-password">
+
+        <label for="confirm-password">Confirm Password *</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" minlength="6" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label>Choose your plan *</label>
+        <input type="radio" id="plan-basic" name="plan" value="basic" required> <label for="plan-basic">Basic</label>
+        <input type="radio" id="plan-premium" name="plan" value="premium"> <label for="plan-premium">Premium</label>
+        <input type="radio" id="plan-vip" name="plan" value="vip"> <label for="plan-vip">VIP</label>
+
+        <label for="newsletter">Subscribe to newsletter</label>
+        <input type="checkbox" id="newsletter" name="newsletter" checked>
+      </fieldset>
+
+      <fieldset>
+        <legend>Other Details</legend>
+
+        <label for="referral">Referral Code</label>
+        <input type="text" id="referral" name="referral" value="WELCOME2025" readonly>
+
+        <label for="website">Personal Website</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+      </fieldset>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Enhanced Form Example. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
